@@ -1,0 +1,3 @@
+export enum CAREER_ERROR {
+    RECORD_NOT_FOUND = 'RECORD_NOT_FOUND',
+}

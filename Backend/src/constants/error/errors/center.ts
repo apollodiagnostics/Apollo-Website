@@ -1,0 +1,3 @@
+export enum CENTER_ERROR {
+    CENTRE_NOT_FOUND = 'CENTRE_NOT_FOUND',
+}

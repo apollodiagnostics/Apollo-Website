@@ -1,0 +1,3 @@
+export enum CITY_ERROR {
+    CITY_NOT_FOUND = 'CITY_NOT_FOUND1',
+}

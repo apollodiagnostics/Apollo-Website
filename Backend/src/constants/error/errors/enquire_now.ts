@@ -1,0 +1,3 @@
+export enum ENQUIRE_ERROR {
+    USER_NOT_CREATEd = 'USER_NOT_CREATED_ERROR',
+}

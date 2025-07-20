@@ -1,0 +1,3 @@
+export enum CENTER_VISIT_SLOTS_ERROR {
+    DATA_NOT_FOUND = 'DATA_NOT_FOUND',
+}

@@ -1,0 +1,6 @@
+export enum OTP_ERROR {
+    INVALID_NUMBER = 'INVALID_NUMBER',
+    INVALID_OTP = 'INVALID_INPUT_DATA',
+    TIME_EXPIRE = 'TIME_EXPIRE',
+    OTP_ERROR = 'Failed in otp send',
+}
