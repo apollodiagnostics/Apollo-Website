@@ -1,0 +1,11 @@
+export { Banner } from './PageBanner'
+export { BookOnlineSlots } from './BookOnlineSlots'
+export { HighLights } from './HighLights'
+export { BookTest } from './BookTest'
+export { WalkInConditions } from './WalkInCondition'
+
+export type { BannerProps } from './PageBanner'
+export type { BookOnlineSlotData } from './BookOnlineSlots'
+export type { HighLightsSectionData } from './HighLights'
+export type { BookTestData } from './BookTest'
+export type { WalkInConditionsData } from './WalkInCondition'

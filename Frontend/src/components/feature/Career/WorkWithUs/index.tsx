@@ -1,0 +1,22 @@
+import React from 'react'
+import {
+  DescriptionData,
+  DescriptionSection,
+} from '@components/entities/DescriptionSection'
+import { getStyles } from '@utils/styles'
+import defaultStyle from './styles'
+
+export type WorkWithUsProps = DescriptionData
+
+export function WorkWithUsSection(props: WorkWithUsProps) {
+  const styles = getStyles(defaultStyle)
+  return (
+    <DescriptionSection
+      {...props}
+      customStyles={{
+        sectionHeading: styles('sectionHeading').sx,
+        wrapper: styles('wrapper').sx,
+      }}
+    />
+  )
+}

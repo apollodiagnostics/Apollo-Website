@@ -1,0 +1,22 @@
+{
+  "Home": {
+    "title": "Hallo Welt!"
+  },
+  "Product": {
+    "title": "Produkt",
+    "description": "Dies ist eine Produktseite.",
+    "adminPortal": "Admin-Portal",
+    "ai-chatbot": "Künstliche Intelligenz Chatbot"
+  },
+  "Resources": {
+    "title": "Ressourcen",
+    "description": "Dies ist eine Ressourcenseite.",
+    "rockets": "Rockets de",
+    "ships": "Ships de"
+  },
+  "NotFound": {
+    "title": "Nicht gefunden",
+    "description": "Die angeforderte Ressource konnte nicht gefunden werden.",
+    "return": "Zurück zur Startseite"
+  }
+}

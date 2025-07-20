@@ -1,0 +1,199 @@
+{
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "endOfLine": "auto"
+      }
+    ] // Avoid conflict rule between Prettier and Airbnb Eslint
+  },
+  "overrides": [
+    // Configuration for TypeScript files
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "airbnb",
+        "airbnb-typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/typescript",
+        "plugin:prettier/recommended"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/indent": "off",
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/no-explicit-any": "error", // no any type
+        "@typescript-eslint/no-shadow": "off", // same name for different variables
+        "react/require-default-props": "off", // default value for optional props is required
+        "react/jsx-props-no-spreading": "off", // allow props spreading
+        "@typescript-eslint/no-unnecessary-condition": "error",
+        "@typescript-eslint/no-floating-promises": [
+          "error",
+          { "ignoreVoid": true }
+        ],
+        "@typescript-eslint/no-misused-promises": "warn",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          { "argsIgnorePattern": "^_" }
+        ],
+        "@typescript-eslint/require-await": "error",
+        "@typescript-eslint/semi": ["error", "never"],
+        "@typescript-eslint/no-redeclare": [
+          "error",
+          { "ignoreDeclarationMerge": true }
+        ],
+        "@typescript-eslint/ban-ts-comment": [
+          "error",
+          {
+            "ts-expect-error": "allow-with-description",
+            "ts-ignore": "allow-with-description",
+            "ts-nocheck": true,
+            "ts-check": false
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "variable",
+            "format": ["camelCase", "UPPER_CASE", "PascalCase"]
+          },
+          {
+            "selector": "function",
+            "format": ["camelCase", "PascalCase"]
+          },
+          {
+            "selector": "interface",
+            "format": ["PascalCase"]
+            // prefix: ['I'],
+          },
+          {
+            "selector": "enum",
+            "format": ["UPPER_CASE"]
+            // suffix: ['Types'],
+          },
+          {
+            "selector": "typeAlias",
+            "format": ["PascalCase"]
+          }
+        ],
+
+        "import/order": [
+          "error",
+          {
+            "groups": ["builtin", "external", "internal"],
+            "newlines-between": "never", // need to fix - group imports with new line
+            "alphabetize": { "order": "asc" },
+            "pathGroups": [
+              { "pattern": "react", "group": "external", "position": "before" },
+              {
+                "pattern": "next/*",
+                "group": "external",
+                "position": "before"
+              },
+              {
+                "pattern": "@config",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@providers",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@libs/**",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@layouts",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@hooks",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@models",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@query/**",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@components/**",
+                "group": "internal",
+                "position": "before"
+              },
+              {
+                "pattern": "@utils/**",
+                "group": "internal",
+                "position": "before"
+              }
+            ],
+            "distinctGroup": true,
+            "pathGroupsExcludedImportTypes": ["builtin"]
+          }
+        ],
+
+        "import/no-restricted-paths": [
+          "error",
+          {
+            "basePath": "./src",
+            "zones": [
+              // App Import Order
+              {
+                "target": ["./hooks", "./config", "./models", "./styles"],
+                "from": ["./app", "./components"],
+                "message": "⚠ Import Error: Stick to the following import hierarchy: app > layout > component > hooks | models | styles > utils > config"
+              },
+
+              // Need to add more
+              // "⚠ Import Error: Stick to the following import hierarchy: app > layout > component > hooks | models | styles > utils > config"
+
+              // Components Import Order
+              {
+                "target": "./components/entities",
+                "from": ["./components/feature"],
+                "message": "⚠ Component Import Error: Stick to the following import hierarchy: feature > entities > widget > common"
+              },
+              {
+                "target": "./components/widget",
+                "from": ["./components/feature", "./components/entities"],
+                "message": "⚠ Component Import Error: Stick to the following import hierarchy: feature > entities > widget > common"
+              },
+              {
+                "target": "./components/common",
+                "from": [
+                  "./components/feature",
+                  "./components/entities",
+                  "./components/widget"
+                ],
+                "message": "⚠ Component Import Error: Stick to the following import hierarchy: feature > entities > widget > common"
+              }
+            ]
+          }
+        ],
+
+        "complexity": ["warn", 12],
+        "no-void": "off",
+        "max-params": ["error", 3], // setting max param to function
+        "max-len": "off" // set mex length of line
+      }
+    }
+  ]
+}

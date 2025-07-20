@@ -1,0 +1,22 @@
+{
+  "Home": {
+    "title": "Hello world!"
+  },
+  "Product": {
+    "title": "Product",
+    "description": "This is a product page.",
+    "adminPortal": "Admin Portal",
+    "ai-chatbot": "AI Chatbot"
+  },
+  "Resources": {
+    "title": "Resources",
+    "description": "This is a resources page.",
+    "rockets": "Rockets",
+    "ships": "Ships"
+  },
+  "NotFound": {
+    "title": "Not Found",
+    "description": "Could not find requested resource.",
+    "return": "Return to home page"
+  }
+}

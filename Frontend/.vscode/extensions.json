@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "wayou.vscode-todo-highlight",
+    "wix.vscode-import-cost",
+    "streetsidesoftware.code-spell-checker",
+    "jock.svg"
+  ]
+}

@@ -1,0 +1,211 @@
+import { StylesClasses, createStyles } from '@utils/styles'
+
+const styles = createStyles({
+  wrapper: {
+    width: '100vw',
+    minHeight: '562px',
+  },
+  innnerContainer: {
+    width: '100vw',
+    maxWidth: '1590px',
+    margin: 'auto',
+    minHeight: '562px',
+    padding: { xs: '34px 6vw', lg: '34px 4vw' },
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    color: 'common.white',
+    textAlign: 'center',
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: { xs: 'column', md: 'row' },
+    gap: { xs: '35px', md: 'unset' },
+    justifyContent: 'space-between',
+  },
+  contactWrapper: {
+    marginTop: { md: '65px' },
+    width: { md: '388px' },
+    height: { md: '301px' },
+    display: 'flex',
+    flexDirection: 'column',
+    gap: { xs: '33px', md: '80px' },
+  },
+  partnerDescription: {
+    fontSize: {
+      xs: '12px',
+      md: '18px',
+    },
+    marginBottom: '23px',
+  },
+  actions: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  actionLinks: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  actionLabel: {
+    textDecoration: 'none',
+  },
+  emailheading: {
+    fontSize: '18px',
+    fontWeight: '700',
+  },
+  partners: {
+    textAlign: 'left',
+  },
+  partnersHeading: {
+    fontWeight: '500px',
+    fontSize: { xs: '18px', md: '24px' },
+    color: 'common.white',
+  },
+  email: {
+    fontSize: { xs: '14px', md: '18px' },
+    fontWeight: '400',
+    color: 'white',
+  },
+  contact: {
+    display: 'flex',
+    flexDirection: 'column',
+    height: '54px',
+    gap: '8px',
+    textAlign: 'left',
+  },
+  icons: {
+    marginTop: '13px',
+    height: '20px',
+    width: '20px',
+    borderRadius: '50%',
+    overflow: 'hidden',
+    marginRight: '8px',
+  },
+  emailWrapper: {
+    display: 'flex',
+    alignItems: 'center',
+    color: 'common.white',
+    gap: '8px',
+    textDecoration: 'none',
+  },
+  mainFrame: {
+    marginTop: { md: '65px' },
+    display: 'flex',
+    gap: { xs: '16px', md: '35px', lg: '50px' },
+    justifyContent: { xs: 'flex-start', md: 'space-between' },
+    flexWrap: 'wrap',
+  },
+  innerComponent: {
+    height: 'fit-content',
+    textAlign: 'start',
+    margin: { xs: '32px 0px', md: '0px 20px 20px' },
+    '.heading': {
+      fontSize: { xs: '16px', md: '18px' },
+      fontWeight: '700',
+      marginBottom: '9px',
+      color: 'common.white',
+    },
+    '.text': {
+      fontSize: { xs: '14px', md: '16px' },
+      fontWeight: '400',
+    },
+    '.dullText': {
+      color: 'common.white',
+      fontSize: { xs: '14px', md: '16px' },
+      height: '9px',
+    },
+    '.contactWrapper': {
+      height: '53px',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+    },
+  },
+  '.dullText': {
+    color: 'custom.silver',
+  },
+  component: {
+    width: '100%',
+    height: '20px',
+    display: 'flex',
+    '.smallItems': {
+      marginLeft: '10px',
+    },
+    fontSize: { xs: '14px', md: '16px' },
+    textDecoration: 'none',
+    color: 'common.white',
+  },
+  disclaimerWrapper: {
+    backgroundColor: 'primary.light',
+    width: '100vw',
+    marginTop: '-2px',
+    border: '0px',
+  },
+  bottomSectionLastPart: {
+    padding: { xs: '0rem 2rem', md: '0rem 6rem' },
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+  },
+  arrowUp: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    color: 'common.white',
+    width: '24px',
+    height: '24px',
+    marginRight: '8px',
+    borderRadius: '100px',
+  },
+  knowMore: {
+    color: 'primary.main',
+    backgroundColor: 'common.white',
+    padding: '16px',
+    '&:hover': {
+      color: 'primary.light',
+    },
+  },
+  bottomSectionItemText: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    color: 'common.white',
+    flexWrap: 'wrap',
+    whiteSpace: 'nowrap',
+    fontWeight: '400',
+    fontSize: { xs: '12px', sm: '16px' },
+    transition: ' 0.3s ease-in-out',
+    '&:hover': {
+      color: 'common.white',
+    },
+  },
+  linkTag: {
+    cursor: 'pointer',
+    textDecoration: 'none',
+    color: 'common.white',
+  },
+  disclaimerText: {
+    color: 'primary.main',
+    marginRight: '0px',
+    marginBottom: '0px',
+    padding: '13px',
+    textAlign: 'center',
+    fontWeight: '400',
+    fontSize: { xs: '12px', md: '16px' },
+  },
+  button: {
+    color: 'common.white',
+    display: 'flex',
+    flexDirection: 'row-reverse',
+    gap: '3px',
+    alignItems: 'center',
+    padding: '16px',
+  },
+  icon: {
+    fontSize: '24px',
+    borderRadius: '50%',
+    backgroundColor: 'primary.main',
+    padding: '3px',
+  },
+})
+export type StylesClassNames = StylesClasses<typeof styles>
+export default styles
